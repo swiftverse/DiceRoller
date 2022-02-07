@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24399B5827AED5540032512F /* DiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24399B5727AED5540032512F /* DiceViewModel.swift */; };
 		243DDAB227AD161400CB29C6 /* DiceRollerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DDAB127AD161400CB29C6 /* DiceRollerApp.swift */; };
 		243DDAB427AD161400CB29C6 /* DiceRoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DDAB327AD161400CB29C6 /* DiceRoller.swift */; };
 		243DDAB627AD161500CB29C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243DDAB527AD161500CB29C6 /* Assets.xcassets */; };
@@ -15,9 +16,12 @@
 		243DDAC927AD177C00CB29C6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DDAC827AD177C00CB29C6 /* DataManager.swift */; };
 		243DDACB27AD197D00CB29C6 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DDACA27AD197D00CB29C6 /* Dice.swift */; };
 		243DDACD27AD1BB600CB29C6 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DDACC27AD1BB600CB29C6 /* DiceView.swift */; };
+		2452494A27B0024800437BE5 /* ShowResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452494927B0024800437BE5 /* ShowResults.swift */; };
+		2488994C27AEBF390043D6A4 /* DiceGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2488994B27AEBF390043D6A4 /* DiceGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24399B5727AED5540032512F /* DiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewModel.swift; sourceTree = "<group>"; };
 		243DDAAE27AD161400CB29C6 /* DiceRoller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRoller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		243DDAB127AD161400CB29C6 /* DiceRollerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRollerApp.swift; sourceTree = "<group>"; };
 		243DDAB327AD161400CB29C6 /* DiceRoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRoller.swift; sourceTree = "<group>"; };
@@ -27,6 +31,8 @@
 		243DDAC827AD177C00CB29C6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		243DDACA27AD197D00CB29C6 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 		243DDACC27AD1BB600CB29C6 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		2452494927B0024800437BE5 /* ShowResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowResults.swift; sourceTree = "<group>"; };
+		2488994B27AEBF390043D6A4 /* DiceGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		243DDABF27AD162900CB29C6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				24399B5727AED5540032512F /* DiceViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -107,6 +114,8 @@
 			children = (
 				243DDAB327AD161400CB29C6 /* DiceRoller.swift */,
 				243DDACC27AD1BB600CB29C6 /* DiceView.swift */,
+				2488994B27AEBF390043D6A4 /* DiceGame.swift */,
+				2452494927B0024800437BE5 /* ShowResults.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,10 +200,13 @@
 			files = (
 				243DDAB427AD161400CB29C6 /* DiceRoller.swift in Sources */,
 				243DDACD27AD1BB600CB29C6 /* DiceView.swift in Sources */,
+				2488994C27AEBF390043D6A4 /* DiceGame.swift in Sources */,
 				243DDAC927AD177C00CB29C6 /* DataManager.swift in Sources */,
 				243DDAC727AD16E300CB29C6 /* FileManager_Extension.swift in Sources */,
 				243DDACB27AD197D00CB29C6 /* Dice.swift in Sources */,
 				243DDAB227AD161400CB29C6 /* DiceRollerApp.swift in Sources */,
+				2452494A27B0024800437BE5 /* ShowResults.swift in Sources */,
+				24399B5827AED5540032512F /* DiceViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

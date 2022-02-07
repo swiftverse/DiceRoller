@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Dice: Codable, Identifiable {
    
     var id = UUID()
-    var type: Int
-    var number: Int
+    var type: Int = 0
+    var number: Int = 0
     var rolls  = [Int]()
     
     init(type: Int , number: Int) {
@@ -22,5 +23,7 @@ struct Dice: Codable, Identifiable {
             rolls.append(roll)
         }
     }
+
+
     
 }
