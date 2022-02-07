@@ -16,7 +16,7 @@ struct DiceRoller: View {
     let numberOfDice = [1, 3, 6, 9, 12, 15, 20, 40, 60, 100]
     let maxNumberOnDice = [1, 3, 6, 9, 12, 15, 20, 40, 60, 100]
     @State private var number: Int?
-    @State private var maxNumber: Int?
+    @State private var maxNumber: Int? 
    @StateObject var diceData = DiceViewModel()
    @State  var type = [Int]()
     @State var isNavigate = false
@@ -95,9 +95,9 @@ struct DiceRoller: View {
     }
     
     func saveData() {
-        diceData.numberOfDice = number ?? 6
-        diceData.maxNumberonDice = maxNumber ?? 6
-        diceData.randomNumbers = (1...(number ?? 6)).map { _ in Int.random(in: 1...(maxNumber ?? 6))}
+        diceData.numberOfDice = number ?? 100
+        diceData.maxNumberonDice = maxNumber ?? 100
+        diceData.randomNumbers = (1...(number ?? 100)).map { _ in Int.random(in: 1...(maxNumber ?? 100))}
     }
  
 }

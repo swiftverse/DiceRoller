@@ -29,16 +29,20 @@ struct DiceGame: View {
     var body: some View {
         VStack {
             Button("Start Roll") {
-                startTimer()               
+                showStopButton = true
+                startTimer()
+                diceData  = Dice(type: dice.maxNumberonDice, number: dice.numberOfDice)
             }
+           
             
             
             Button("Stop Roll"){
-                stopTimer()
+                    stopTimer()
                     dices.append(diceData)
-              
-
-                        DataManager.save(dices)
+               
+                    DataManager.save(dices)
+                    showStopButton = false
+             //   diceData  = Dice(type: dice.maxNumberonDice, number: dice.numberOfDice)
             }
            
            
@@ -47,6 +51,10 @@ struct DiceGame: View {
                 .font(.largeTitle)
                 .padding(.horizontal)
                 .foregroundColor(.cyan)
+                .onDisappear {
+                    stopTimer()
+                    diceData.rolls = (1..<100).map {_ in Int.random(in: 1...diceData.type ) }
+                }
         }
         
         
@@ -55,8 +63,16 @@ struct DiceGame: View {
             ForEach(0..<dice.numberOfDice, id: \.self) { item in
                 DiceView(randomRoll: $diceData.rolls[item])
                     .onReceive(timer) { date in
-                        randomDice()
+                        if showStopButton == true {
+                            randomDice()
+                        }
                     }
+                    .onAppear {
+                        if showStopButton == false {
+                            stopTimer()
+                        }
+                    }
+                   
                     
                 }
             }
@@ -73,6 +89,7 @@ struct DiceGame: View {
     
     func stopTimer() {
             self.timer.upstream.connect().cancel()
+        
         }
         
     func startTimer() {
@@ -80,10 +97,10 @@ struct DiceGame: View {
         }
 }
 
-//struct DiceGame_Previews: PreviewProvider {
-//    @State static var demo = 10
-//    @State static var type = [10, 2]
-//    static var previews: some View {
-//        DiceGame(dice: DiceViewModel())
-//    }
-//}
+struct DiceGame_Previews: PreviewProvider {
+    @State static var demo = 10
+    @State static var type = [10, 2]
+    static var previews: some View {
+        DiceGame(dice: DiceViewModel())
+    }
+}
