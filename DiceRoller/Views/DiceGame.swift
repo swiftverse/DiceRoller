@@ -53,7 +53,7 @@ struct DiceGame: View {
                 .foregroundColor(.cyan)
                 .onDisappear {
                     stopTimer()
-                    diceData.rolls = (1..<100).map {_ in Int.random(in: 1...diceData.type ) }
+                    diceData.rolls = (0..<100).map {_ in Int.random(in: 1...diceData.type ) }
                 }
         }
         
