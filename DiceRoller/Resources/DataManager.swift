@@ -21,8 +21,9 @@ struct DataManager {
         
     }
     
-    static func save(_ dices: [Dice]) {
+    static func save(_ dices: [Dice])  {
         if let data = try? JSONEncoder().encode(dices) {
+           
             try? data.write(to: savePath, options: [.atomic, .completeFileProtection])
         }
     }

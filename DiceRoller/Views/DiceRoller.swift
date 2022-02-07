@@ -38,7 +38,7 @@ struct DiceRoller: View {
                 }
                 .pickerStyle(.segmented)
                 
-                Section("max number on dice sides") {
+                Section("max number") {
                     Picker("Max number", selection: $maxNumber) {
                         ForEach(maxNumberOnDice, id:\.self) { id in
                             Text("\(id)").tag(id as Int?)
